@@ -1,0 +1,400 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "0656f8d8-3ca0-4b1f-b70f-4ae4c88f38bd",
+   "metadata": {},
+   "source": [
+    "Q1. What are the three measures of central tendency?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "eeb83b4a-4e4b-49c7-b609-31fee03017ae",
+   "metadata": {},
+   "source": [
+    "the three measures of centeral tendeny is mean ,median and mode "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bff59cd4-971d-43ef-8ad4-782eaf0c262c",
+   "metadata": {},
+   "source": [
+    "Q2. What is the difference between the mean, median, and mode? How are they used to measure the\n",
+    "central tendency of a dataset?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "aaa5c7c6-e94c-4eb0-9567-c36053f5bea9",
+   "metadata": {},
+   "source": [
+    "#the dufference we can discuss one by one:\n",
+    "    #1 mean: it is the avg of the given data\n",
+    "    #for example x = {1,1,2,2,3,3,4,5,5,6}\n",
+    "   # popULATION MEAN(u) = xi/N\n",
+    "                          total no. added/total no.present will give the menan\n",
+    "    here, x = {1,1,2,2,3,3,4,5,5,6}/10 = 32/10 = 3.2\n",
+    "    \n",
+    "    #2 median:   # if even count: x = {1,2,2,3,4,5}  ,take the centeral element and divide by total centeral element no,\n",
+    "      here, x = {1,2,2,3,4,5} = 2+3/2 = 2.5\n",
+    "      #if odd count:\n",
+    "      1,2,3,4,5  = 3/1 = 1  , \"\"median is used to find the the central tendency to handle outliers\"\"\n",
+    "    \n",
+    "    \n",
+    "    #mode: maximum ocuuring element(frequency maximum),\n",
+    "   x = { 1,2,3,4,5,6,7,7,8,8,8,9,9} , find the max ocuuring element in this ,\n",
+    "       here, 8 is mode of this data set\n",
+    "       \n",
+    "       useu; used emensely in EDA, and feature engeenering, or to to fing  the missing data\n"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "7c913a87-33fa-4341-9f78-645f8c026062",
+   "metadata": {},
+   "source": [
+    "Q3. Measure the three measures of central tendency for the given height data:\n",
+    "[178,177,176,177,178.2,178,175,179,180,175,178.9,176.2,177,172.5,178,176.5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "9c88697f-c9c6-4913-b449-3a2516830543",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import statistics\n",
+    "\n",
+    "h = [178,177,176,177,178.2,178,175,179,180,175,178.9,176.2,177,172.5,178,176.5]\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "4a7c5e1e-a499-47d3-b0cb-c50e740689c7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "177.01875"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    " statistics.mean(h)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "4847ab99-eaa0-4aa6-a8d6-e452a980803a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "177.0"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "statistics.median(h)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "42fd7182-7a17-4bee-8b1d-ff86212bdcc0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "178"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "statistics.mode(h)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d2ba0213-8ac0-423b-8a51-772f06c607da",
+   "metadata": {},
+   "source": [
+    "Q4. Find the standard deviation for the given data:\n",
+    "[178,177,176,177,178.2,178,175,179,180,175,178.9,176.2,177,172.5,178,176.5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "b5be5422-2d9f-49d2-9894-a28fe9a4dbcb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "data =  [178,177,176,177,178.2,178,175,179,180,175,178.9,176.2,177,172.5,178,176.5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "436d53f1-807e-4686-b6cd-e289bffe3d60",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.8472389305844188"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "statistics.stdev(data)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d7d3dd01-d935-42f1-bad3-8c55f0f2d0c7",
+   "metadata": {},
+   "source": [
+    "Q5. How are measures of dispersion such as range, variance, and standard deviation used to describe\n",
+    "the spread of a dataset? Provide an example."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "00fdcf53-8624-4fbf-93cd-cb93b4fac62d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "data =  [178,177,176,177,178.2,178,175,179,180,175,178.9,176.2,177,172.5,178,176.5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "d0960954-6625-47c4-be0d-4ec540db4c78",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3.4122916666666674"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "statistics.variance(data)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "f7a63c1f-bd30-4b29-8485-95fa5b76d107",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.8472389305844188"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "statistics.stdev(data)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "ef909850-714c-4bb3-86b4-f592672d25cc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "175\n",
+      "176\n",
+      "177\n",
+      "178\n",
+      "179\n"
+     ]
+    }
+   ],
+   "source": [
+    "data =  {178,177,176,177,178.2,178,175,179,180,175,178.9,176.2,177,172.5,178,176.5}\n",
+    "\n",
+    "for i in range(175,180):\n",
+    "        print(i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "17dc6aae-cf46-4e12-87c2-b113787ba3b5",
+   "metadata": {},
+   "source": [
+    "Q6. What is a Venn diagram?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "3bfdef18-1802-49e0-9e55-bb93662f91ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "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\n",
+      "text/plain": [
+       "<Figure size 640x480 with 1 Axes>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "from matplotlib_venn import venn2\n",
+    "import matplotlib.pyplot as plt\n",
+    "data1 =  {178,177,176,177,178.2,178,175,179,180,175,178.9,176.2,177,172.5,178,176.5}\n",
+    "data2 = {178,177,176,177,178.2,178,175,179,180,175,178.9,176.2,177,172.5,178,176.5}\n",
+    "venn2([data1, data2], ('data 1', 'data 2'))\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "19930cd2-f454-41ad-84ad-fff6699d5284",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Collecting matplotlib-venn\n",
+      "  Downloading matplotlib-venn-0.11.9.tar.gz (30 kB)\n",
+      "  Installing build dependencies ... \u001b[?25ldone\n",
+      "\u001b[?25h  Getting requirements to build wheel ... \u001b[?25ldone\n",
+      "\u001b[?25h  Installing backend dependencies ... \u001b[?25ldone\n",
+      "\u001b[?25h  Preparing metadata (pyproject.toml) ... \u001b[?25ldone\n",
+      "\u001b[?25hRequirement already satisfied: numpy in /opt/conda/lib/python3.10/site-packages (from matplotlib-venn) (1.23.5)\n",
+      "Requirement already satisfied: scipy in /opt/conda/lib/python3.10/site-packages (from matplotlib-venn) (1.9.3)\n",
+      "Requirement already satisfied: matplotlib in /opt/conda/lib/python3.10/site-packages (from matplotlib-venn) (3.6.2)\n",
+      "Requirement already satisfied: pyparsing>=2.2.1 in /opt/conda/lib/python3.10/site-packages (from matplotlib->matplotlib-venn) (3.0.9)\n",
+      "Requirement already satisfied: kiwisolver>=1.0.1 in /opt/conda/lib/python3.10/site-packages (from matplotlib->matplotlib-venn) (1.4.4)\n",
+      "Requirement already satisfied: cycler>=0.10 in /opt/conda/lib/python3.10/site-packages (from matplotlib->matplotlib-venn) (0.11.0)\n",
+      "Requirement already satisfied: packaging>=20.0 in /opt/conda/lib/python3.10/site-packages (from matplotlib->matplotlib-venn) (22.0)\n",
+      "Requirement already satisfied: pillow>=6.2.0 in /opt/conda/lib/python3.10/site-packages (from matplotlib->matplotlib-venn) (9.2.0)\n",
+      "Requirement already satisfied: contourpy>=1.0.1 in /opt/conda/lib/python3.10/site-packages (from matplotlib->matplotlib-venn) (1.0.6)\n",
+      "Requirement already satisfied: python-dateutil>=2.7 in /opt/conda/lib/python3.10/site-packages (from matplotlib->matplotlib-venn) (2.8.2)\n",
+      "Requirement already satisfied: fonttools>=4.22.0 in /opt/conda/lib/python3.10/site-packages (from matplotlib->matplotlib-venn) (4.38.0)\n",
+      "Requirement already satisfied: six>=1.5 in /opt/conda/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib->matplotlib-venn) (1.16.0)\n",
+      "Building wheels for collected packages: matplotlib-venn\n",
+      "  Building wheel for matplotlib-venn (pyproject.toml) ... \u001b[?25ldone\n",
+      "\u001b[?25h  Created wheel for matplotlib-venn: filename=matplotlib_venn-0.11.9-py3-none-any.whl size=32999 sha256=3bad62b5cb5744c25a653d5118dda53021653aabbe497169005f1e287df52c04\n",
+      "  Stored in directory: /home/jovyan/.cache/pip/wheels/ab/a1/93/9cbd4e11e6964009387cd595450dfcbb6998e15dfbaa5805dd\n",
+      "Successfully built matplotlib-venn\n",
+      "Installing collected packages: matplotlib-venn\n",
+      "Successfully installed matplotlib-venn-0.11.9\n",
+      "Note: you may need to restart the kernel to use updated packages.\n"
+     ]
+    }
+   ],
+   "source": [
+    "pip install matplotlib-venn\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5e3d8433-0df8-4156-beb0-39f6094642aa",
+   "metadata": {},
+   "source": [
+    "Q7. For the two given sets A = (2,3,4,5,6,7) & B = (0,2,6,8,10). Find:\n",
+    "(i) A B\n",
+    "(ii) A ⋃ B"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "df7ada71-e5f2-4a06-b80c-36b2dfcbb6bb",
+   "metadata": {},
+   "source": [
+    "A = (2,3,4,5,6,7) \n",
+    "B = (0,2,6,8,10)\n",
+    "A∩B={2,6},A∪B={0,2,3,4,5,6,7,8,10}"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6e0fd859-43ac-4a03-ad25-a308d152cb10",
+   "metadata": {},
+   "source": [
+    "Q8. What do you understand about skewness in data?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "df3713dc-df06-46e0-b03b-3a5a8856913e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "skewness means frequency of data"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
